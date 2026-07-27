@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Milk Shake Mix - Sorveteria</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="celular">
+
+    <!-- TELA 1: INÍCIO -->
+    <div class="tela" id="telaInicio">
+      <div class="logo-topo">
+        <h1>MILK SHAKE</h1>
+        <div class="emoji-grande">🍦</div>
+        <h1>MIX</h1>
+        <p><i>sorvetes & açaí</i></p>
+      </div>
+      <button class="botao-amarelo" onclick="mostrarTela('telaBoasVindas')">
+        CLIQUE PARA COMEÇAR
+      </button>
+    </div>
+
+    <!-- TELA 2: BEM-VINDO -->
+    <div class="tela escondida" id="telaBoasVindas">
+      <div class="logo-arredondado">
+        <h1>MILK SHAKE</h1>
+        <div class="emoji-medio">🍦</div>
+        <h1>MIX</h1>
+      </div>
+      <h2 class="titulo-branco">BEM-VINDO</h2>
+      <div class="grupo-botoes">
+        <button class="botao-amarelo" onclick="mostrarTela('telaCategorias')">COMER NO LOCAL</button>
+        <button class="botao-amarelo" onclick="mostrarTela('telaCategorias')">RETIRE PARA LEVAR</button>
+      </div>
+    </div>
+
+    <!-- TELA 3: CATEGORIAS -->
+    <div class="tela escondida" id="telaCategorias">
+      <div class="cabecalho">
+        <button class="voltar" onclick="mostrarTela('telaBoasVindas')">← VOLTAR</button>
+        <h2>CATEGORIAS</h2>
+      </div>
+      <div class="conteudo" id="listaCategorias"></div>
+      <div class="rodape">
+        <span>🛒 <span id="qtdCat">0</span> ITENS</span>
+        <span class="total">R$ <span id="totalCat">0,00</span></span>
+      </div>
+    </div>
+
+    <!-- TELA 4: PRODUTOS -->
+    <div class="tela escondida" id="telaProdutos">
+      <div class="cabecalho">
+        <button class="voltar" onclick="mostrarTela('telaCategorias')">← VOLTAR</button>
+        <h2 id="tituloCategoria"></h2>
+      </div>
+      <div class="conteudo" id="listaProdutos"></div>
+      <div class="rodape">
+        <span>🛒 <span id="qtdProd">0</span> ITENS</span>
+        <span class="total">R$ <span id="totalProd">0,00</span></span>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
